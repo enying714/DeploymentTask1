@@ -1,5 +1,5 @@
 # SWE40006 Deployment Activity 1
-# 105965515
+
 ## Project Overview
 
 This repository contains the source code and WiX installer configuration for **Deployment Task 1** in **SWE40006 Software Deployment and Evolution**.
