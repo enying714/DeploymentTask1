@@ -1,0 +1,81 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+
+  <Package
+      Name="Study Task Manager"
+      Manufacturer="Student Deployment Project"
+      Version="1.0.0"
+      UpgradeCode="9A50C740-94EF-40D4-B44A-74D1D29C8792"
+      Scope="perMachine">
+
+    <MajorUpgrade
+        DowngradeErrorMessage="A newer version of Study Task Manager is already installed." />
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <StandardDirectory Id="ProgramFilesFolder">
+      <Directory Id="INSTALLFOLDER" Name="Study Task Manager" />
+    </StandardDirectory>
+
+    <Feature Id="MainFeature"
+             Title="Study Task Manager"
+             Level="1">
+
+      <ComponentGroupRef Id="ApplicationFiles" />
+
+    </Feature>
+
+  </Package>
+
+
+  <Fragment>
+
+    <ComponentGroup Id="ApplicationFiles"
+                    Directory="INSTALLFOLDER">
+
+      <!-- Main application executable -->
+      <Component Id="MainApplication" Guid="*">
+          <File Id="MainExe"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.App.exe"
+                KeyPath="yes" />
+      </Component>
+
+      <!-- Main application DLL -->
+      <Component Id="MainApplicationLibrary" Guid="*">
+          <File Id="MainAppDll"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.App.dll"
+                KeyPath="yes" />
+      </Component>
+
+      <!-- Core DLL -->
+      <Component Id="CoreLibrary" Guid="*">
+          <File Id="CoreDll"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.Core.dll"
+                KeyPath="yes" />
+      </Component>
+
+      <!-- Validation DLL -->
+      <Component Id="ValidationLibrary" Guid="*">
+          <File Id="ValidationDll"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.Validation.dll"
+                KeyPath="yes" />
+      </Component>
+
+      <!-- Dependency configuration -->
+      <Component Id="DependenciesConfiguration" Guid="*">
+          <File Id="DepsJson"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.App.deps.json"
+                KeyPath="yes" />
+      </Component>
+
+      <!-- Runtime configuration -->
+      <Component Id="RuntimeConfiguration" Guid="*">
+          <File Id="RuntimeConfig"
+                Source="$(var.StudyTaskManager.App.TargetDir)StudyTaskManager.App.runtimeconfig.json"
+                KeyPath="yes" />
+      </Component>
+
+    </ComponentGroup>
+
+  </Fragment>
+
+</Wix>

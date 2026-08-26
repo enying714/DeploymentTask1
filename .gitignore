@@ -1,0 +1,19 @@
+# Visual Studio temporary files
+.vs/
+*.user
+*.suo
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# WiX generated binaries
+*.msi
+*.wixpdb
+
+# Debug and Release output
+[Dd]ebug/
+[Rr]elease/
+
+# Log files
+*.log

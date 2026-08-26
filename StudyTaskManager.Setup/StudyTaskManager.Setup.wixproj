@@ -1,0 +1,9 @@
+<Project Sdk="WixToolset.Sdk/4.0.6">
+  <PropertyGroup>
+    <OutputName>StudyTaskManagerInstaller</OutputName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StudyTaskManager.App\StudyTaskManager.App.csproj" />
+  </ItemGroup>
+</Project>
