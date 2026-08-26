@@ -1,12 +1,12 @@
 # SWE40006 Deployment Activity 1 – WiX Desktop Deployment
 
-## Project Overview
+## Assignment Overview
 
 This repository contains the source code and WiX installer configuration for **Deployment Activity 1** in **SWE40006 Software Deployment and Evolution**.
 
-The project demonstrates the deployment of a C# Windows desktop application using the **Windows Installer XML (WiX) Toolset**. The application developed for this task is a simple **Study Task Manager** built with Windows Forms.
+The assignment demonstrates the deployment of a C# Windows desktop application using the **Windows Installer XML (WiX) Toolset**. The application developed for this task is a simple **Study Task Manager** built with Windows Forms.
 
-The project is structured to demonstrate the following task levels:
+The assignment is structured to demonstrate the following task levels:
 
 - **Task 1.2 – Credit:** Deploy my own C# desktop application using WiX.
 - **Task 1.3 – Distinction:** Deploy the application with multiple DLL dependencies.
@@ -40,11 +40,11 @@ StudyTaskManager
 
 ### StudyTaskManager.App
 
-This project contains the Windows Forms user interface and is the main application executed by the user.
+This assignment contains the Windows Forms user interface and is the main application executed by the user.
 
 ### StudyTaskManager.Core
 
-This project contains the task model and task-management operations. It is compiled as:
+This assignment contains the task model and task-management operations. It is compiled as:
 
 ```text
 StudyTaskManager.Core.dll
@@ -54,7 +54,7 @@ The main application depends on this DLL for task-related functionality.
 
 ### StudyTaskManager.Validation
 
-This project contains validation logic for task title, subject and due date input. It is compiled as:
+This assignment contains validation logic for task title, subject and due date input. It is compiled as:
 
 ```text
 StudyTaskManager.Validation.dll
@@ -64,7 +64,7 @@ The main application depends on this DLL for input validation.
 
 ### StudyTaskManager.Setup
 
-This project contains the WiX configuration used to package the application and its required dependencies into an MSI installer.
+This assignment contains the WiX configuration used to package the application and its required dependencies into an MSI installer.
 
 The final MSI includes:
 
