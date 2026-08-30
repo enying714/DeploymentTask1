@@ -3,6 +3,8 @@
 ## Assignment Overview
 
 This repository contains the source code and WiX installer configuration for **Deployment Activity 1** in **SWE40006 Software Deployment and Evolution**.
+Student: Cheong En Ying
+ID: 105965515
 
 The assignment demonstrates the deployment of a C# Windows desktop application using the **Windows Installer XML (WiX) Toolset**. The application developed for this task is a simple **Study Task Manager** built with Windows Forms.
 
